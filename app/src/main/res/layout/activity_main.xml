@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/edittext"
+            android:text="Enter an amount"
+            android:layout_centerVertical="true"
+            android:textAlignment="center" android:paddingEnd="20dp"/>
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="CAD $"
+            android:id="@+id/edittext"
+            android:layout_centerHorizontal="true"
+            android:inputType="numberDecimal"/>
+    </RelativeLayout>
+
+    <Spinner
+        android:layout_width="200dp"
+        android:id="@+id/spinner"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/textview"
+            android:text="Converted amount"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:paddingEnd="20dp"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textview"
+            android:hint="converted amount"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

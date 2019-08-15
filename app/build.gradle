@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.foreginex"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "api_key", "\"Bearer iO2PJJCcnQY_WAq8PkD0jA70ErLPueb6vKxtSAitf64pEf2D48IG8PlN63kg33OmRF0hrwgLzBUwanilm7j4ilTZHfsi_UGEQsKP4fFhAa418KSijPgctrZhLzycW3Yx\""
+            buildConfigField "int", "resto_count", '10'
+            buildConfigField "String", "url_name", "\"https://storage.googleapis.com/public-static-artifacts/currencies/names.json\""
+            buildConfigField "String", "url_price", "\"https://storage.googleapis.com/public-static-artifacts/currencies/prices.json\""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation 'com.android.volley:volley:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
