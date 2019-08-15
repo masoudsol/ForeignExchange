@@ -68,13 +68,13 @@ public class ExchangeViewModel extends AndroidViewModel {
         SharedPreferences.Editor prefsEditor = sharedPref.edit();
         Gson gson = new Gson();
         String json = gson.toJson(repo.getCurrencyModel());
-        prefsEditor.putString(sharedPrefKey, json);
+        prefsEditor.putString(sharedPrefCurrencyKey, json);
         prefsEditor.apply();
     }
 
     private void loadCurrency(){
         Gson gson = new Gson();
-        String json = sharedPref.getString(sharedPrefKey, "");
+        String json = sharedPref.getString(sharedPrefCurrencyKey, "");
         CurrencyModel obj = gson.fromJson(json, CurrencyModel.class);
         if (obj != null) {
             repo.setCurrencyModels(obj);

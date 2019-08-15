@@ -23,6 +23,7 @@ public class Repository {
     private CurrencyModel currencyModel;
     private List<Currency> currencies = new ArrayList<>();
     private HashMap<String,Currency> currencyHashMap = new HashMap<>();
+
     public static Repository getInstance(){
         if(instance == null){
             instance = new Repository();
@@ -35,7 +36,6 @@ public class Repository {
         Collections.sort(currencyList, new Comparator<Currency>() {
             @Override
             public int compare(Currency currency, Currency t1) {
-                Log.d("dssda", "compare: "+currency.iso_code+" "+t1.iso_code);
                 if (currency != null && t1 != null) {
                     return currency.iso_code.compareToIgnoreCase(t1.iso_code);
                 } else {

@@ -15,11 +15,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.HashMap;
 import java.util.List;
 
-import com.foreignex.modules.models.Currency;
-import com.foreignex.modules.models.CurrencyModel;
 import com.foreignex.R;
 import com.foreignex.modules.viewmodels.ExchangeViewModel;
 
