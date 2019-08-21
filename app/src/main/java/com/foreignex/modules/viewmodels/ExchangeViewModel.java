@@ -2,6 +2,7 @@ package com.foreignex.modules.viewmodels;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,7 +10,6 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
-import com.foreignex.R;
 import com.foreignex.modules.models.CurrencyModel;
 import com.foreignex.modules.repository.Repository;
 import com.google.gson.Gson;
@@ -50,7 +50,7 @@ public class ExchangeViewModel extends AndroidViewModel {
         }
     }
 
-    public MutableLiveData<List<String>> getCurrencyModelMutableLiveData() {
+    public LiveData<List<String>> getCurrencyModelLiveData() {
         return currencyModelMutableLiveData;
     }
 

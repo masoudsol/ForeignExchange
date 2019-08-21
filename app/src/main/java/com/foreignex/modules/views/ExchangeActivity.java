@@ -74,7 +74,7 @@ public class ExchangeActivity extends AppCompatActivity implements ActivityCompa
         });
 
         exchangeViewModel = ViewModelProviders.of(this).get(ExchangeViewModel.class);
-        exchangeViewModel.getCurrencyModelMutableLiveData().observe(this,new Observer<List<String>>() {
+        exchangeViewModel.getCurrencyModelLiveData().observe(this,new Observer<List<String>>() {
             @Override
             public void onChanged(@Nullable List<String> currencyModels) {
                 adapter = new ArrayAdapter<String>(ExchangeActivity.this, R.layout.support_simple_spinner_dropdown_item, currencyModels);
@@ -91,7 +91,7 @@ public class ExchangeActivity extends AppCompatActivity implements ActivityCompa
     protected void onDestroy() {
         super.onDestroy();
 
-        exchangeViewModel.getCurrencyModelMutableLiveData().removeObservers(this);
+        exchangeViewModel.getCurrencyModelLiveData().removeObservers(this);
         spinner.setOnItemSelectedListener(null);
     }
 }

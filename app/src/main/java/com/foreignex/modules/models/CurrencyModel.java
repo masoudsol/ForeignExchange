@@ -4,5 +4,9 @@ import java.io.Serializable;
 import java.util.List;
 
 public class CurrencyModel implements Serializable {
-    public List<Currency> currencies;
+    private List<Currency> currencies;
+
+    public List<Currency> getCurrencies() {
+        return currencies;
+    }
 }
