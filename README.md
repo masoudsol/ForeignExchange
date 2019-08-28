@@ -9,8 +9,9 @@ Features
 - Sort button on the top right corner will provide various sorting option for the grid
 - You can access detail view by tapping the restaurant grid
 
-Pods
-Picaso image caching
+Libraries
+- Volley
+- GSon
 
 License
 Copyright © 2019 Mas One. All rights reserved.
